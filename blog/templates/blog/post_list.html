@@ -1,24 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Initialdose</title>
-</head>
-<body>
-
-    <div>
-        <h1><a href="">Initialdose Blog</a></h1>
-    </div>
-
+{% extends 'blog/base.html' %}
+{% block content %}
     {% for yazi in yazilar %}
-        <div>
-            <p>published: {{ yazi.yayinlanma_tarihi }}</p>
-            <h2><a href="">{{ yazi.baslik }}</a></h2>
-            <p>{{ yazi.icerik|linebreaks }}</p>
+        <div class="post">
+            <div class="date">
+                <p>published: {{ yazi.yayinlanma_tarihi }}</p>
+                <h2><a href="">{{ yazi.baslik }}</a></h2>
+                <p>{{ yazi.icerik|linebreaks }}</p>
+            </div>
         </div>
     {% endfor %}
+{% endblock %}
 
 
-</body>
-</html>
 

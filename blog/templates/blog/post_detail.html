@@ -1,6 +1,5 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-    {% for yazi in yazilar %}
         <div class="post">
             <div class="date">
                 <p>published: {{ yazi.yayinlanma_tarihi }}</p>
@@ -8,7 +7,6 @@
                 <p>{{ yazi.icerik|linebreaks }}</p>
             </div>
         </div>
-    {% endfor %}
 {% endblock %}
 
 
